@@ -51,10 +51,9 @@ public class AbilityFlightFlap extends Ability
     @SideOnly(Side.CLIENT)
     public void tickClient()
     {
-        
         if(getParent() == Minecraft.getMinecraft().player && !Minecraft.getMinecraft().player.capabilities.isFlying)
         {            
-            if(getParent().onGround || Minecraft.getMinecraft().player.capabilities.isCreativeMode)
+            if(getParent().onGround)
                 return;
             
             if(!Keyboard.isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindJump.getKeyCode()) && !Keyboard.isKeyDown(Minecraft.getMinecraft().gameSettings.keyBindSneak.getKeyCode())){
